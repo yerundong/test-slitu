@@ -12,6 +12,7 @@ import {
   mapToArray,
   mapToObject,
   jsonGetValue,
+  Timer,
 } from "slitu";
 
 export default {
@@ -20,21 +21,14 @@ export default {
   mounted() {
     // console.log(displaceByType(NaN, "aaaa", ["Number", "NaN"]));
     // console.log(displaceNil(undefined, 555));
-    const value = jsonGetValue(
-      [
-        {
-          value: 123,
-          label: "aaa",
-        },
-        {
-          value: 456,
-          label: "bbb",
-        },
-      ],
-      "label",
-      "aaa"
-    );
-    console.log(value);
+    const timer = new Timer();
+    let a = 0;
+    for (let index = 0; index < 1000000; index++) {
+      a += index;
+    }
+    console.log(a);
+    timer.end();
+    console.log(timer.getDiff());
   },
 };
 </script>
