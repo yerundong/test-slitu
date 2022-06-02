@@ -6,18 +6,35 @@
 
 <script>
 import {
-  objectToFormData,
-  isArr,
-  isObj,
-  isNul,
-  isUndef,
-  isNaN,
-  isLikeNum,
+  displaceByType,
+  displaceNil,
+  arrayToMap,
+  mapToArray,
+  mapToObject,
+  jsonGetValue,
 } from "slitu";
 
 export default {
   name: "index",
   components: {},
-  mounted() {},
+  mounted() {
+    // console.log(displaceByType(NaN, "aaaa", ["Number", "NaN"]));
+    // console.log(displaceNil(undefined, 555));
+    const value = jsonGetValue(
+      [
+        {
+          value: 123,
+          label: "aaa",
+        },
+        {
+          value: 456,
+          label: "bbb",
+        },
+      ],
+      "label",
+      "aaa"
+    );
+    console.log(value);
+  },
 };
 </script>

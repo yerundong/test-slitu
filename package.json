@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "slitu": "^1.0.0",
+    "slitu": "^1.0.2",
     "toformat": "^2.0.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
